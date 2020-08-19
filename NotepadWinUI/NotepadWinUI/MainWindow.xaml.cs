@@ -40,33 +40,26 @@ namespace NotepadWinUI
         {
             if ((sender as MenuFlyoutItem) == CopyMenuItem)
             {
-                String MainBoxContent;
-                MainEditBox.Document.GetText(Microsoft.UI.Text.TextGetOptions.FormatRtf,out MainBoxContent);
-                var package = new DataPackage();
-                package.SetText(MainBoxContent);
-                Clipboard.SetContent(package);
+                var content = new DataPackage();
+                content.SetText(MainEditBox.Text);
+                Clipboard.SetContent(content);
             }
             else if ((sender as MenuFlyoutItem) == PasteMenuItem) 
             {
                 Debug.WriteLine("Pasting Clipboard in Main Edit Box");
 
-                Debug.WriteLine("Copying Stuff in the Main Edit Box");
-                var clipboardContent = Windows.ApplicationModel.DataTransfer
-                    .Clipboard.GetContent();
-
-                String ClipBoardText = await clipboardContent.GetTextAsync();
-
-                MainEditBox.Document.SetText(Microsoft.UI.Text.TextSetOptions.None, ClipBoardText);
+                if (MainEditBox.CanPasteClipboardContent)
+                {
+                    MainEditBox.PasteFromClipboard();
+                }
             }
             else if((sender as MenuFlyoutItem) == CutMenuItem)
             {
                 Debug.WriteLine("Cutting Stuff from Main Edit Box");
-                String MainBoxContent;
-                MainEditBox.Document.GetText(Microsoft.UI.Text.TextGetOptions.FormatRtf, out MainBoxContent);
-                var package = new DataPackage();
-                package.SetText(MainBoxContent);
-                Clipboard.SetContent(package);
-                MainEditBox.Document.SetText(TextSetOptions.None, "");
+                var content = new DataPackage();
+                content.SetText(MainEditBox.Text);
+                Clipboard.SetContent(content);
+                MainEditBox.Text = "";
             }
         }
 

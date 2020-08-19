@@ -86,7 +86,8 @@
             RelativePanel.AlignLeftWithPanel="True"
             RelativePanel.Below="MenuBar"
             RelativePanel.AlignBottomWithPanel="True">
-            <RichEditBox
+            <TextBox
+                AcceptsReturn ="True"
                 x:Name="MainEditBox"
                 BorderBrush="Transparent"
                 RelativePanel.AlignTopWithPanel="True"
