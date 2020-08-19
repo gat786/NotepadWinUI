@@ -27,5 +27,30 @@ namespace NotepadWinUI
         {
             this.InitializeComponent();
         }
+
+        private void FileMenuItem_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void EditMenuItem_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void ViewMenuItem_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void FormatMenuItem_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void HelpMenuItem_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }

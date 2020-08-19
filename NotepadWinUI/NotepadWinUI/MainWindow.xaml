@@ -9,19 +9,37 @@
     <RelativePanel>
         <MenuBar x:Name="MenuBar">
             <MenuBarItem Title="File">
-                <MenuFlyoutItem Text="New"/>
-                <MenuFlyoutItem Text="Open"/>
-                <MenuFlyoutItem Text="Save"/>
+                <MenuFlyoutItem 
+                    x:Name="NewMenuItem" 
+                    Text="New"/>
+                <MenuFlyoutItem 
+                    x:Name="OpenMenuItem" 
+                    Text="Open"/>
+                <MenuFlyoutItem 
+                    x:Name="SaveMenuItem" 
+                    Text="Save"/>
             </MenuBarItem>
             <MenuBarItem Title="Edit">
-                <MenuFlyoutItem Text="Copy"/>
-                <MenuFlyoutItem Text="Paste"/>
-                <MenuFlyoutItem Text="Cut"/>
+                <MenuFlyoutItem 
+                    Text="Copy" 
+                    Icon="Copy"/>
+                <MenuFlyoutItem 
+                    Text="Paste" 
+                    Icon="Paste"/>
+                <MenuFlyoutItem 
+                    Text="Cut" 
+                    Icon="Cut"/>
             </MenuBarItem>
             <MenuBarItem Title="View">
-                <MenuFlyoutItem Text="Zoom in"/>
-                <MenuFlyoutItem Text="Zoom out"/>
-                <MenuFlyoutItem Text="Status Bar"/>
+                <MenuFlyoutItem 
+                    Text="Zoom in"
+                    Icon="Zoom"/>
+                <MenuFlyoutItem 
+                    Text="Zoom out"
+                    Icon="ZoomOut"/>
+                <MenuFlyoutItem 
+                    Text="Status Bar"
+                    />
             </MenuBarItem>
             <MenuBarItem Title="Format">
                 <MenuFlyoutItem Text="Font >"/>
