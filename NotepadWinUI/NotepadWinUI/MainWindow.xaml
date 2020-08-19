@@ -11,43 +11,74 @@
             <MenuBarItem Title="File">
                 <MenuFlyoutItem 
                     x:Name="NewMenuItem" 
+                    Tapped="FileMenuItem_Click"
                     Text="New"/>
                 <MenuFlyoutItem 
                     x:Name="OpenMenuItem" 
+                    Tapped="FileMenuItem_Click"
                     Text="Open"/>
                 <MenuFlyoutItem 
                     x:Name="SaveMenuItem" 
+                    Tapped="FileMenuItem_Click"
                     Text="Save"/>
             </MenuBarItem>
             <MenuBarItem Title="Edit">
                 <MenuFlyoutItem 
+                    x:Name="CopyMenuItem"
+                    Tapped="EditMenuItem_Click"
                     Text="Copy" 
                     Icon="Copy"/>
                 <MenuFlyoutItem 
+                    x:Name="PasteMenuItem"
                     Text="Paste" 
+                    Tapped="EditMenuItem_Click"
                     Icon="Paste"/>
-                <MenuFlyoutItem 
+                <MenuFlyoutItem
+                    x:Name="CutMenuItem"
                     Text="Cut" 
+                    Tapped="EditMenuItem_Click"
                     Icon="Cut"/>
             </MenuBarItem>
             <MenuBarItem Title="View">
-                <MenuFlyoutItem 
+                <MenuFlyoutItem
+                    x:Name="ZoomInMenuItem"
                     Text="Zoom in"
+                    Tapped="ViewMenuItem_Click"
                     Icon="Zoom"/>
                 <MenuFlyoutItem 
+                    x:Name="ZoomOutMenuItem"
                     Text="Zoom out"
+                    Tapped="ViewMenuItem_Click"
                     Icon="ZoomOut"/>
                 <MenuFlyoutItem 
+                    x:Name="StatusBarMenuItem"
                     Text="Status Bar"
+                    Tapped="ViewMenuItem_Click"
                     />
             </MenuBarItem>
             <MenuBarItem Title="Format">
-                <MenuFlyoutItem Text="Font >"/>
-                <MenuFlyoutItem Text="Word Wrap"/>
+                <MenuFlyoutItem 
+                    x:Name="FontMenuItem"
+                    Text="Font"
+                    Tapped="FormatMenuItem_Click"
+                    />
+                <MenuFlyoutItem 
+                    x:Name="WordWrapMenuItem"
+                    Text="Word Wrap"
+                    Tapped="FormatMenuItem_Click"
+                    />
             </MenuBarItem>
             <MenuBarItem Title="Help">
-                <MenuFlyoutItem Text="About"/>
-                <MenuFlyoutItem Text="Developers"/>
+                <MenuFlyoutItem 
+                    x:Name="AboutMenuItem"
+                    Text="About"
+                    Tapped="HelpMenuItem_Click"
+                    />
+                <MenuFlyoutItem 
+                    x:Name="DevelopersMenuItem"
+                    Text="Developers"
+                    Tapped="HelpMenuItem_Click"
+                    />
             </MenuBarItem>
         </MenuBar>
         <RelativePanel 
@@ -56,6 +87,7 @@
             RelativePanel.Below="MenuBar"
             RelativePanel.AlignBottomWithPanel="True">
             <RichEditBox
+                x:Name="MainEditBox"
                 BorderBrush="Transparent"
                 RelativePanel.AlignTopWithPanel="True"
                 RelativePanel.AlignRightWithPanel="True"
