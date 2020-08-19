@@ -1,0 +1,48 @@
+﻿<Window
+    x:Class="NotepadWinUI.MainWindow"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:NotepadWinUI"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+    <RelativePanel>
+        <MenuBar x:Name="MenuBar">
+            <MenuBarItem Title="File">
+                <MenuFlyoutItem Text="New"/>
+                <MenuFlyoutItem Text="Open"/>
+                <MenuFlyoutItem Text="Save"/>
+            </MenuBarItem>
+            <MenuBarItem Title="Edit">
+                <MenuFlyoutItem Text="Copy"/>
+                <MenuFlyoutItem Text="Paste"/>
+                <MenuFlyoutItem Text="Cut"/>
+            </MenuBarItem>
+            <MenuBarItem Title="View">
+                <MenuFlyoutItem Text="Zoom in"/>
+                <MenuFlyoutItem Text="Zoom out"/>
+                <MenuFlyoutItem Text="Status Bar"/>
+            </MenuBarItem>
+            <MenuBarItem Title="Format">
+                <MenuFlyoutItem Text="Font >"/>
+                <MenuFlyoutItem Text="Word Wrap"/>
+            </MenuBarItem>
+            <MenuBarItem Title="Help">
+                <MenuFlyoutItem Text="About"/>
+                <MenuFlyoutItem Text="Developers"/>
+            </MenuBarItem>
+        </MenuBar>
+        <RelativePanel 
+            RelativePanel.AlignRightWithPanel="True"
+            RelativePanel.AlignLeftWithPanel="True"
+            RelativePanel.Below="MenuBar"
+            RelativePanel.AlignBottomWithPanel="True">
+            <RichEditBox
+                BorderBrush="Transparent"
+                RelativePanel.AlignTopWithPanel="True"
+                RelativePanel.AlignRightWithPanel="True"
+                RelativePanel.AlignLeftWithPanel="True"
+                RelativePanel.AlignBottomWithPanel="True"/>
+        </RelativePanel>
+    </RelativePanel>
+</Window>
